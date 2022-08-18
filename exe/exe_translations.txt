@@ -1,0 +1,32 @@
+#VAR(Table, TABLE)
+#ADDTBL("sjis.tbl", Table)
+#ACTIVETBL(Table)
+#VAR(PTR, CUSTOMPOINTER)
+#CREATEPTR(PTR, "LINEAR", -2147547136, 32)
+
+// Setting this to JMP 145A1 makes everyone start at 0 HP and die
+// Should be 145A4
+#JMP($000145A4)
+//一郎
+Ken
+<$00>
+
+#JMP($000145B4)
+//アレックス
+Alex
+<$00>
+
+#JMP($000145CC)
+//モーガン
+Morgan
+<$00>
+
+#JMP($000145E4)
+//ビンセント
+Vincent
+<$00>
+
+#JMP($0002F1D8)
+//グール
+Ghoul
+<$00>

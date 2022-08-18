@@ -1,0 +1,18 @@
+cd/orig/*
+cd/working/*
+
+exe/Launchme
+
+voices/converted
+voices/film
+voices/orig
+voices/raw
+
+*.xdelta3
+*.log
+*.iso
+*.bin
+*.cue
+
+*error.txt
+Deep Learning Results.txt
