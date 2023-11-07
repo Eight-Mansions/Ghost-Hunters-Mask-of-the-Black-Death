@@ -8,9 +8,16 @@ del /s /q cd\%working_name%\* 1>nul
 Xcopy /E /q cd\%original_name%\ cd\%working_name%\ 1>nul
 echo:
 
+echo Adding in modified system files for compilation...
+del /s /q cd\%working_name%\System\*  1>nul
+rmdir /s /q cd\%working_name%\System  1>nul
+mkdir cd\%working_name%\System  1>nul
+Xcopy /E /q System_modified cd\%working_name%\System  1>nul
+copy images\BannerScreen cd\%working_name%\ 1>nul
+echo:
+
 echo Converting all images to cels and inserting...
 python tools\BMPToCEL.py images\ cd\%working_name%\
-copy images\BannerScreen cd\%working_name%\ 1>nul
 echo:
 
 echo Copying all script files over...
